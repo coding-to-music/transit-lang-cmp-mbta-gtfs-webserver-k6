@@ -1,9 +1,10 @@
-# Trannet
+# C# C Sharp
 
 Info:
 
 ```
-> dotnet --info                                                                                                       (main|?) 20:16
+> dotnet --info
+(main|?) 20:16
 .NET SDK (reflecting any global.json):
  Version:   6.0.402
  Commit:    6862418796
@@ -19,6 +20,7 @@ Runtime Environment:
 To run:
 
 ```
-> dotnet build --configuration Release
-> ./bin/Release/net6.0/Trannet --urls http://localhost:4000
+dotnet build --configuration Release
+
+./bin/Release/net6.0/Trannet --urls http://localhost:4000
 ```

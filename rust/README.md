@@ -1,4 +1,4 @@
-# Trustit
+# Rust
 
 ```
 > cargo --version

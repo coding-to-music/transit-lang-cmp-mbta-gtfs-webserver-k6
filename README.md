@@ -123,6 +123,60 @@ highest RAM and CPU usage I see in ActivityMonitor just out of curiosity.
 
 ## Running each different language webserver
 
+### C# C Sharp
+
+```
+cd c_sharp
+
+dotnet build --configuration Release
+
+./bin/Release/net6.0/Trannet --urls http://localhost:4000
+```
+
+### deno
+
+```
+cd deno
+
+deno run --lock=lock.json -A app.ts Red
+```
+
+### Elixir
+
+```
+cd elixir
+
+env MIX_ENV=prod SECRET_KEY_BASE="somerandomthingdoesntmatter" mix phx.server
+```
+
+### Go
+
+```
+cd go_lang
+
+go build app.go
+
+./app Red
+```
+
+### Rust
+
+```
+cd rust
+
+cargo run --release Red
+```
+
+### Scalia
+
+```
+cd scalia
+
+no info
+```
+
+## file `loadTestSmallResponses.js`
+
 file `loadTestSmallResponses.js`
 
 ```
