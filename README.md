@@ -94,7 +94,7 @@ from the trip ID to a list of indices into the big stop time list.
 This is tested using the [k6](https://github.com/grafana/k6) tool, which I
 installed via homebrew.
 
-Linux install info:
+### Linux install info for k6:
 
 ```
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys C5AD17C747E3415A3642D57D77C6C491D6AC1D69
@@ -120,6 +120,58 @@ on the same machine, but the requests are decently beefy overall that I figured
 the load from the test harness wouldn't disrupt the response data too badly.
 Here I report the requests/sec that k6 spits out, and also an eyeball at the
 highest RAM and CPU usage I see in ActivityMonitor just out of curiosity.
+
+## Running each different language webserver
+
+file `loadTestSmallResponses.js`
+
+```
+import http from "k6/http";
+
+let routes = [
+  "CR-Fairmount",
+  "CR-Fitchburg",
+  "CR-Worcester",
+  "CR-Franklin",
+  "CR-Greenbush",
+  "CR-Haverhill",
+  "CR-Kingston",
+  "CR-Lowell",
+  "CR-Middleborough",
+  "CR-Needham",
+  "CR-Newburyport",
+  "CR-Providence",
+  "CR-Foxboro",
+  "Boat-F4",
+  "Boat-F1",
+  "Boat-EastBoston",
+  "121",
+  "201",
+  "202",
+  "210",
+  "245",
+  "351",
+  "354",
+];
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+export default function () {
+  shuffleArray(routes);
+  routes.forEach((route) => {
+    http.get(`http://localhost:4000/schedules/${route}`);
+  });
+}
+```
+
+call
+
+http://localhost:4000/schedules/66
 
 #### JSON heavy
 
