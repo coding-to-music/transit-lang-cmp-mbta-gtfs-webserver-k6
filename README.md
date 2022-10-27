@@ -133,7 +133,7 @@ dotnet build --configuration Release
 ./bin/Release/net6.0/Trannet --urls http://localhost:4000
 ```
 
-### deno
+### Deno
 
 ```
 cd deno
