@@ -41,8 +41,8 @@ work with any transit system's data. To get the MBTA data, the following
 commands can be run in the repo's root directory:
 
 ```
-> curl -o MBTA_GTFS.zip https://cdn.mbta.com/MBTA_GTFS.zip
-> unzip -d MBTA_GTFS MBTA_GTFS.zip
+curl -o MBTA_GTFS.zip https://cdn.mbta.com/MBTA_GTFS.zip
+unzip -d MBTA_GTFS MBTA_GTFS.zip
 ```
 
 The apps are all named some mashup of "Transit" and the programming language
@@ -92,7 +92,18 @@ from the trip ID to a list of indices into the big stop time list.
 ### Webserver performance
 
 This is tested using the [k6](https://github.com/grafana/k6) tool, which I
-installed via homebrew. There is a `loadTest.js` script in the root of the repo,
+installed via homebrew.
+
+Linux install info:
+
+```
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys C5AD17C747E3415A3642D57D77C6C491D6AC1D69
+echo "deb https://dl.k6.io/deb stable main" | sudo tee /etc/apt/sources.list.d/k6.list
+sudo apt-get update
+sudo apt-get install k6
+```
+
+There is a `loadTest.js` script in the root of the repo,
 and I ran the test as follows:
 
 ```
