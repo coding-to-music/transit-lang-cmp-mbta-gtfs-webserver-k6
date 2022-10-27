@@ -1,3 +1,29 @@
+# transit-lang-cmp-mbta-gtfs-webserver-k6
+
+# 🚀 This repository implements the same simple backend API in a variety of languages 🚀
+
+https://github.com/coding-to-music/transit-lang-cmp-mbta-gtfs-webserver-k6
+
+From / By https://github.com/losvedir/transit-lang-cmp
+
+## Environment variables:
+
+```java
+
+```
+
+## GitHub
+
+```java
+git init
+git add .
+git remote remove origin
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:coding-to-music/transit-lang-cmp-mbta-gtfs-webserver-k6.git
+git push -u origin main
+```
+
 # An informal comparison of several programming languages
 
 This repository implements the same simple backend API in a variety of

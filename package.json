@@ -1,0 +1,21 @@
+{
+  "name": "transit-lang-cmp-mbta-gtfs-webserver-k6",
+  "version": "1.0.0",
+  "description": "This repository implements the same simple backend API in a variety of languages",
+  "main": "loadTest.js",
+  "scripts": {
+    "deploy": "git add . && git commit -m Build && git push",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/losvedir/transit-lang-cmp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/losvedir/transit-lang-cmp/issues"
+  },
+  "homepage": "https://github.com/losvedir/transit-lang-cmp#readme"
+}

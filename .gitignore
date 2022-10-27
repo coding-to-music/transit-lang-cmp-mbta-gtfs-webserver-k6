@@ -1,3 +1,4 @@
+.env
 MBTA_GTFS*
 .vscode
 Trannet/bin
